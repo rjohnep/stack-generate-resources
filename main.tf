@@ -1,4 +1,4 @@
 resource "random_password" "this" {
-  count = 1000 # Just adjust this number
-  length = 10
+  count = 1001 # Just adjust this number
+  length = 9
 }
