@@ -3,7 +3,7 @@ resource "random_password" "this" {
   length = 9
 }
 
-resource "env.local" "var" {
+resource "env_local" "var" {
   count = 33 # Just adjust this number
   length = 8
 }
