@@ -5,5 +5,5 @@ resource "random_password" "this" {
 
 resource ".env.local" "var" {
   count = 33 # Just adjust this number
-  length = 9
+  length = 8
 }
