@@ -9,6 +9,5 @@ resource "random_password" "name" {
 }
 
 resource "aws_s3_bucket" "example" {
-  count = 33 # Just adjust this number
-  length = 8
+  count = 33
 }
