@@ -8,6 +8,15 @@ resource "random_password" "name" {
   length = 8
 }
 
-resource "aws_s3_bucket" "example" {
-  count = 33
+variable "pet_count" {
+  default = 15
+}
+
+resource "random_pet" "example" {
+  count  = var.pet_count
+  length = 2
+}
+
+output "pet_names" {
+  value = [for pet in random_pet.example : pet.id]
 }
